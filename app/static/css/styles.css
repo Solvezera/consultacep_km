@@ -1,0 +1,114 @@
+body {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #3498db;
+}
+
+.tabs {
+    display: flex;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.tablink {
+    flex: 1;
+    text-align: center;
+    padding: 15px 0;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-size: 18px;
+    color: #b8b8b8;
+    font-weight: bold;
+}
+
+.tablink.active {
+    border-color: #3498db;
+    color: #ffffff;
+}
+
+.tablink:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tabcontent-container {
+    border: 1px solid #888;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.tabcontent.active {
+    display: block;
+}
+
+.input-field {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #888;
+    border-radius: 4px;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.btn {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.result-info {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.result-label {
+    font-weight: bold;
+    color: #3498db;
+}
+
+.result-value {
+    margin-left: 10px;
+}

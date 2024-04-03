@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de CEP e Quilometragem</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tablink active" onclick="openTab(event, 'cep-form')">Consultar CEP</button>
+            <button class="tablink" onclick="openTab(event, 'km-form')">Consultar Quilometragem</button>
+        </div>
+        <div class="tabcontent-container">
+            <div id="cep-form" class="tabcontent active">
+                <h2>Consulta de CEP</h2>
+                <form id="form-cep">
+                    <label for="cep">CEP de Origem:</label>
+                    <input type="text" id="cep" name="cep" class="input-field" required>
+                    <button type="submit" class="btn">Consultar</button>
+                </form>
+                <div id="result-cep-info" class="result hidden"></div>
+            </div>
+            <div id="km-form" class="tabcontent hidden">
+                <h2>Consulta de Quilometragem</h2>
+                <form id="form-quilometragem">
+                    <label for="origem">Origem:</label>
+                    <input type="text" id="origem" name="origem" class="input-field" required>
+                    <label for="destino">Destino:</label>
+                    <input type="text" id="destino" name="destino" class="input-field" required>
+                    <button type="submit" class="btn">Consultar</button>
+                </form>
+                <div id="result-quilometragem-info" class="result hidden"></div>
+            </div>
+        </div>
+    </div>  
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
